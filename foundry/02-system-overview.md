@@ -42,7 +42,7 @@ together, these stages ensure that business communication remains dependable, ob
 
 ## stage 1 - receive
 
-the first thing responsibility of mailMonger is to receive an email request from a customer
+the first responsibility of mailMonger is to receive an email request from a customer
 
 at this stage, the platform accepts the request without making assumptions about its validity
 
@@ -62,12 +62,12 @@ after verifying the customer, mailMonger validates the request itself
 
 this includes ensuring that required information is present, correctly formatted, and consistent with the platform's expectations
 
-requests that validation should not continue through the delivery pipeline
+requests that fail validation should not continue through the delivery pipeline
 
 
 ## stage 4 - persist
 
-once a request has been verified and validated, mailMonger, accepts responsibility for it by recording it in persistent storage
+once a request has been verified and validated, mailMonger accepts responsibility for it by recording it in persistent storage
 
 persisting the request ensures that it is no longer dependent on the current api request or the memory of a running application
 
@@ -90,8 +90,8 @@ this principle forms the foundation of the platform's reliability strategy
 the persistence stage is responsible for:
 
 - recording the accepted email request
-- assigning a uniques identifier
-- recording the current processin status
+- assigning a unique identifier
+- recording the current processing status
 - storing information required for future processing
 - establishing a durable source of truth for the remainder of the email lifecycle 
 

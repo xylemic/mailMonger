@@ -1,0 +1,30 @@
+{
+  "name": "@mailMonger/api",
+  "version": "0.1.0",
+  "description": "mailMonger http api",
+  "private": true,
+  "scripts": {
+    "dev" : "tsx watch src/server.ts",
+    "build" : "tsc",
+    "start" : "node dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.15.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

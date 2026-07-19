@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:17
+
+    container_name: mailmonger-postgres
+
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: mailmonger
+      POSTGRES_PASSWORD: mailmonger
+      POSTGRES_DB: mailmonger
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+

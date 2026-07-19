@@ -1,0 +1,16 @@
+import { Client } from "pg"
+import { drizzle } from "drizzle-orm/node-postgres"
+import { env } from "../config/env.js"
+
+
+const client = new Client({
+  connectionString : env.DATABASE_URL
+})
+
+export const db = drizzle(client)
+
+export async function connectDatabase() {
+  await client.connect()
+}
+
+

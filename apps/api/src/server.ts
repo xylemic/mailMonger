@@ -1,23 +1,15 @@
-import express from "express"
+import { app } from "./app.js"
 import { env } from "./config/env.js"
-
-const app = express()
-
-const PORT = env.PORT
+import { connectDatabase } from "./database/connection.js"
 
 
+async function start() {
+  await connectDatabase()
+
+  app.listen(env.PORT, () => console.log(`server running on port ${env.PORT}`))
+}
 
 
-app.get("/health", (request, response) => {
-  response.status(200).json({
-    service : "mailMonger",
-    status : "healthy"
-  })
-})
-
-
-app.listen(PORT, () => {
-  console.log(`mailMonger api is runnung on port ${PORT}`)
-})
+start()
 
 

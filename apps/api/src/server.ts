@@ -1,10 +1,17 @@
 import { app } from "./app.js"
 import { env } from "./config/env.js"
 import { connectDatabase } from "./database/connection.js"
+import { 
+  startEmailRequestProcessor
+} from "./features/email-requests/processor.js"
 
 
 function startHttpServer() {
-  app.listen(env.PORT, () => console.log(`server running on port ${env.PORT}`))
+  app.listen(env.PORT, () => {
+    console.log(`server running on port ${env.PORT}`)
+  
+  startEmailRequestProcessor()
+  })
 }
 
 

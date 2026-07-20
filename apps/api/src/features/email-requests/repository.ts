@@ -5,10 +5,7 @@ import { CreateEmailRequest } from "./types.js"
 export async function createEmailRequestRecord(
   request : CreateEmailRequest
 ) {
-  await db.insert(emailRequests).values({
-    ...request,
-    status : "queued"
-  })
+  await db.insert(emailRequests).values(request)
 }
 
 

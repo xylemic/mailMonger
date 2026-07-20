@@ -9,8 +9,8 @@ import {
 
 export const emailRequests = pgTable("email_requests", {
   id : uuid("id").defaultRandom().primaryKey(),
-  customerId : uuid("customer_id").notNull(),
-  domainId : uuid("domain_id").notNull(),
+  // customerId : uuid("customer_id").notNull(),
+  // domainId : uuid("domain_id").notNull(),
   recipient : varchar("recipient", { length : 320 }).notNull(),
   subject : varchar("subject", { length : 998 }).notNull(),
   body : text("body").notNull(),

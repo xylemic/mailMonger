@@ -3,7 +3,8 @@ import {
   uuid,
   varchar,
   text,
-  timestamp
+  timestamp,
+  integer
 } from "drizzle-orm/pg-core"
 
 
@@ -15,6 +16,9 @@ export const emailRequests = pgTable("email_requests", {
   subject : varchar("subject", { length : 998 }).notNull(),
   body : text("body").notNull(),
   status : varchar("status", { length : 50 }).notNull(),
+  retryCount : integer("retry_count")
+     .default(0)
+     .notNull(), 
   createdAt : timestamp("created_at").defaultNow().notNull()
 })
 

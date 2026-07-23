@@ -22,6 +22,27 @@
       "when": 1784670905324,
       "tag": "0002_amazing_red_hulk",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784824279983,
+      "tag": "0003_large_mephisto",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1784827294122,
+      "tag": "0004_chilly_thena",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1784831151125,
+      "tag": "0005_clammy_adam_warlock",
+      "breakpoints": true
     }
   ]
 }

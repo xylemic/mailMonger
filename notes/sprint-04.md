@@ -20,8 +20,8 @@ fields:
 
 - `id`
 - `email`
+- `passwordHash`
 - `createdAt`
-- `updatedAt`
 
 this marks the point where mailmonger begins distinguishing platform customers from email requests
 
